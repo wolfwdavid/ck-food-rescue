@@ -1,0 +1,1 @@
+{"slug":"food-rescue","name":"Food Rescue Board","version":"1.0.0","blurb":"Live board of surplus produce at Brooklyn pickup points, read straight from the team's Google Sheet.","repo":"wolfwdavid/ck-food-rescue","live":"https://wolfwdavid.github.io/ck-food-rescue/","data":{"kind":"sheet-csv","sheetId":"","tab":"Stock","publishedCsvUrl":"","sample":"data/sample.csv"}}

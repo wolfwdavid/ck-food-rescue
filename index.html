@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Food Rescue — what's out right now</title>
+  <meta name="description" content="Live board of surplus produce at Brooklyn pickup points. See what food is where right now and go pick it up.">
+  <meta name="theme-color" content="#f7f5ee">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b5551f'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#locations">Skip to locations</a>
+  <div class="band" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <p class="kicker" id="team-name">Brooklyn Food Rescue</p>
+    <h1>Food Rescue<span class="h1-sub">what's out right now</span></h1>
+    <p class="lede">Free surplus produce at neighborhood pickup points. Come take what you need.</p>
+  </header>
+
+  <main>
+    <section class="status-bar" aria-label="Board status">
+      <p class="status-line" id="status" aria-live="polite">Loading the board…</p>
+      <button type="button" class="btn btn-refresh" id="refresh-btn">Refresh</button>
+    </section>
+
+    <div class="filters" role="group" aria-label="Filter items">
+      <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="chip" data-filter="available" aria-pressed="false">Available only</button>
+    </div>
+
+    <p class="loc-notice" id="loc-notice" hidden>
+      Showing one location — <a href="./" id="show-all">show all</a>
+    </p>
+
+    <section id="locations" class="locations" aria-label="Pickup locations"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="source-line" id="source-line">Loading…</p>
+    <p><a class="btn btn-update" id="update-link" href="#" target="_blank" rel="noopener" hidden>Update stock</a></p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js" defer></script>
+  <script src="js/csv.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
